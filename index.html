@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penis para Henrique</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema Reprodutor Masculino</h1>
+    <svg width="200" height="300" viewBox="0 0 200 300">
+        <!-- Testículos -->
+        <circle cx="50" cy="250" r="20" fill="blue" onmouseover="showInfo('Testículos: Produzem espermatozoides e testosterona.')" onmouseout="hideInfo()" />
+        <circle cx="150" cy="250" r="20" fill="blue" onmouseover="showInfo('Testículos: Produzem espermatozoides e testosterona.')" onmouseout="hideInfo()" />
+        
+        <!-- Pênis -->
+        <rect x="85" y="100" width="30" height="150" fill="lightblue" onmouseover="showInfo('Pênis: Órgão copulador e excretor de urina.')" onmouseout="hideInfo()" />
+        <circle cx="100" cy="90" r="15" fill="lightblue" onmouseover="showInfo('Glande: Parte sensível do pênis.')" onmouseout="hideInfo()" />
+    </svg>
+    <div id="info" class="info"></div>
+    <script>
+        function showInfo(text) {
+            let infoBox = document.getElementById('info');
+            infoBox.innerText = text;
+            infoBox.style.display = 'block';
+        }
+        function hideInfo() {
+            let infoBox = document.getElementById('info');
+            infoBox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
